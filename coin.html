@@ -1,0 +1,57 @@
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html> 
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <style>
+        @-webkit-keyframes slideshow{
+        		0%{opacity:1;}
+            50%{opacity:.5}
+        		100%{opacity:1;}
+        }
+        @-moz-keyframes slideshow{
+            0%{opacity:1;}
+            50%{opacity:.5}
+        		100%{opacity:1;} 
+                }        
+        	#slide li{
+        		opacity:1;
+        		-webkit-animation: slideshow 1s infinite ; 
+                        -moz-animation: slideshow 1s infinite ;
+        		position:absolute;
+                        		
+        	}
+         
+         /*          #slide li:nth-child(1){
+        		-webkit-animation-delay: 1s;
+                        -moz-animation-delay: 1s;
+        	}
+        	#slide li:nth-child(2){
+        		-webkit-animation-delay: 1s;
+                        -moz-animation-delay: 1s;
+        	}
+        	#slide li:nth-child(3){
+        		-webkit-animation-delay: 1s;
+                        -moz-animation-delay: 1s;           
+        	} */
+        	
+        </style>
+    </head>
+    <body>
+        <div id="coin">
+        <section id="slide">           
+             <ul>
+               <li><img src="images/icons/coin1.png" alt="coin" title="coin" width="98" height="116" /></li>                    
+               <li><img src="images/icons/coin2.png" alt="coin" title="coin" width="98" height="116" /></li>
+               <li><img src="images/icons/coin3.png" alt="coin" title="coin" width="98" height="116" /></li>
+             </ul>
+        </section>
+       
+        </div> 
+        
+    </body>
+</html>

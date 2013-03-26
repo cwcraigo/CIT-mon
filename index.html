@@ -1,0 +1,150 @@
+
+<!DOCTYPE html>
+<html lang="en-us">
+	<head>
+  	<meta charset="UTF-8">
+    <title>Home Page | 4cMobile</title>
+    <!-- LOAD SCRIPTS (FASTER: ASYNC LOADING) -->
+    <script src="./library/lib.js"></script>
+    <script src="./library/petClass.js"></script>
+    <script src="./library/dashboard.js"></script>
+    <script src="./library/leaderboard.js"></script>
+    <link href="screen.css" rel ="stylesheet" type="text/css" media="screen"/>
+
+	</head>
+	<body onload="init()">
+		<!-- HEADER -->
+		<div id="header">
+			<div id="coin">
+	         <section id="slide">
+	             <ul>
+	               <li>
+	               	<img src="images/icons/coin1.png" class="img1" alt="coin" title="coin" height="95" width:"80"/>
+	               </li>
+	               <li>
+	               	<img src="images/icons/coin2.png" class="img2" alt="coin" title="coin" height="95"  width:"80"/>
+	               </li>
+	               <li>
+	               	<img src="images/icons/coin3.png" class="img3" alt="coin" title="coin" height="95" width:"80"/>
+	               </li>
+	             </ul>
+	             <!-- <ul class="cb-slideshow">
+	             	<li>
+	             		<span><img src="images/icons/coin1.png" class="img1" alt="coin" title="coin" width="98" height="116" /></span>
+	             	</li>
+	             	<li>
+	             		<span><img src="images/icons/coin2.png" class="img2" alt="coin" title="coin" width="98" height="116" /></span>
+	             	</li>
+	             	<li>
+	             		<span><img src="images/icons/coin3.png" class="img3" alt="coin" title="coin" width="98" height="116" /></span>
+	             	</li>
+	             </ul> -->
+	         </section>
+     		</div>
+         <p id="coinCount"></p>
+			<span id="title">&nbsp;CIT'mon</span>
+		</div>
+
+	<div id="content">
+
+		<div id="home">
+
+		<div id="pageTitle">
+			<h1>Choose Your Character!</h1>
+		</div>
+		<!-- ============================
+		  CARD CONTENT
+		============================= -->
+		<div id="petDetailsOuterBorder">
+			<div id="petDetailsDiv">
+				<div id="nameLvlDiv">
+					<p id="specAtt"></p>
+					<p id="lvlAtt"></p>
+				</div>
+				<div id="petImageOuterBorder">
+					<div id="petImageDiv">
+
+						<img id ="petImage" src="#" alt="Pet Image">
+					</div>
+				</div>
+				<!-- ============================
+				  Create table to hold pet stats
+				============================= -->
+				<div id="tableDiv">
+					<table id="statsTable">
+						<tr>
+							<td class="tblTag">Str: </td>
+							<td id="strAtt" class="tblVal">null</td>
+						</tr>
+
+
+						<tr>
+							<td class="tblTag">Int: </td>
+							<td id="intAtt" class="tblVal">null</td>
+						</tr>
+
+						<tr>
+							<td class="tblTag">Vit: </td>
+							<td id="vitAtt" class="tblVal">null</td>
+						</tr>
+
+						<tr>
+							<td class="tblTag">Mana: </td>
+							<td id="manaAtt" class="tblVal">null</td>
+						</tr>
+
+						<tr>
+							<td class="tblTag">Exp: </td>
+							<td id="expAtt" class="tblVal">null</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+		</div>
+
+		<!-- Cycle Through Pets -->
+		<div id="nextPrevButtons">
+			<div id="innerCtrl">
+				<button id="prevPet" onclick="petSelection(0)">PREV</button>
+				<button id="nextPet" onclick="petSelection(1)">NEXT</button>
+			</div>
+		</div>
+</div>
+		<!-- ============================
+		  TESTING AREA
+		============================= -->
+		<div id="dangerZone"></div>
+
+		<!-- FOOTER -->
+		<div id="navigation">
+			<div id="subNav">
+				<button id="homeButton" onclick="init()">
+					<img src="images/icons/homeLogo.png" id="homeLogo" alt="Home Logo">
+				</button>
+				<button id="leaderBoardButton" onclick='get_leaderboard()'>
+					<img src="images/icons/leaderBoardLogo.png" id="leaderLogo" alt="Leader Board Logo">
+				</button>
+				<button id="backPackButton">
+					<img src="images/icons/backPackLogo.png" id="backPackLogo" alt="Backpack Logo">
+				</button>
+				<button id="exploreButton">
+					<img src="images/icons/exploreLogo.png" id="exploreLogo" alt="Explore Logo">
+				</button>
+			</div>
+		</div>
+
+		<!-- <button onclick="testing()">Testing Button</button><br/> -->
+
+		<!-- TEST IMAGES -->
+		<!-- <div id="soFar" style="margin: 10px auto;
+									  width: 525px;
+									  border: 1px groove #000">
+			<img src="images/neutral/sofar.png" alt="sofar">
+		</div> -->
+
+	</div>
+	</body>
+</html>
+
+
+<!-- Append : to petName before species in InnerHtml clause -->
