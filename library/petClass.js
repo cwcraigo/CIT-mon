@@ -4,8 +4,8 @@ var allPets;
 // THIS FUNCTION RUNS WHEN THE PAGE HAS LOADED
 function init() {
 
-	document.getElementById("dangerZone").style.visibility='hidden';
-	document.getElementById("home").style.visibility='visible';
+	document.getElementById("dangerZone").style.display='none';
+	document.getElementById("home").style.display='block';
 
 	// localStorage.setItem('allPets', null);
 	allPets  = new Array();

@@ -9,6 +9,7 @@
     <script src="./library/petClass.js"></script>
     <script src="./library/dashboard.js"></script>
     <script src="./library/leaderboard.js"></script>
+    <script src="./library/leaderboard_worker.js"></script>
     <link href="screen.css" rel ="stylesheet" type="text/css" media="screen"/>
 
 	</head>
@@ -113,21 +114,27 @@
 		<!-- ============================
 		  TESTING AREA
 		============================= -->
-		<div id="dangerZone"></div>
+		<div id="dangerZone">
+
+			<div id='tableDiv'>
+				<table id='leaderboardTable'></table>
+			</div>
+
+		</div>
 
 		<!-- FOOTER -->
 		<div id="navigation">
 			<div id="subNav">
-				<button id="homeButton" onclick="init()">
+				<button class="nav_button" id="homeButton" onclick="init()">
 					<img src="images/icons/homeLogo.png" id="homeLogo" alt="Home Logo">
 				</button>
-				<button id="leaderBoardButton" onclick='get_leaderboard()'>
+				<button class="nav_button" id="leaderBoardButton" onclick='get_leaderboard()'>
 					<img src="images/icons/leaderBoardLogo.png" id="leaderLogo" alt="Leader Board Logo">
 				</button>
-				<button id="backPackButton">
+				<button class="nav_button" id="backPackButton">
 					<img src="images/icons/backPackLogo.png" id="backPackLogo" alt="Backpack Logo">
 				</button>
-				<button id="exploreButton">
+				<button class="nav_button" id="exploreButton">
 					<img src="images/icons/exploreLogo.png" id="exploreLogo" alt="Explore Logo">
 				</button>
 			</div>

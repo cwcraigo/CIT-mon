@@ -1,10 +1,10 @@
 *{
     padding:0px;
     margin:0px;
-    font-size: 16pt;    
+    font-size: 16pt;
 }
 html{
-    
+
 }
 #content{
     width:100%;
@@ -44,11 +44,11 @@ html{
 50% {opacity: 1;}
 75% {opacity: 1;}
 100%{opacity: 0;}
-}   
+}
 
 #slide li{
 opacity:.5;
--webkit-animation: slideshow .87s linear infinite; 
+-webkit-animation: slideshow .87s linear infinite;
 -moz-animation: slideshow .87s linear infinite;
 position:absolute;
 }
@@ -65,7 +65,7 @@ position:absolute;
 
 #slide li:nth-child(3){
 -webkit-animation-delay: .64s;
--moz-animation-delay: .64s;           
+-moz-animation-delay: .64s;
 }
 
 #coinCount{
@@ -76,7 +76,7 @@ height: 60px;
 }
 
 /**************************************************************
-* CIT'mon CARD 
+* CIT'mon CARD
 ***************************************************************/
 #petDetailsOuterBorder{
     margin: 0px auto;
@@ -94,7 +94,7 @@ height: 60px;
     height: 455px;
     margin:0px auto;
     padding: 30px 26px 15px 26px;
-    
+
 }
 
 #petImageOuterBorder{
@@ -111,7 +111,7 @@ height: 60px;
     width:275px;
     height:205px;
     border: 1px solid #000;
-    
+
 }
 
 #nameLvlDiv{
@@ -136,7 +136,7 @@ height: 60px;
 }
 
 #statsTable{
-    margin:0px auto; 
+    margin:0px auto;
 }
 
 #statsTable td{
@@ -163,11 +163,11 @@ height: 60px;
 #nextPrevButtons{
     margin:10px auto;
     width: 350px;
-    
+
 }
 #innerCtrl{
     width:125px;
-    margin:0px auto;     
+    margin:0px auto;
 }
 
 #innerCtrl button {
@@ -179,7 +179,7 @@ height: 60px;
 ***************************************************************/
 #navigation{
     padding: 15px 0px;
-    background-color: rgb(81, 134,221);   
+    background-color: rgb(81, 134,221);
     min-width: 780px;
     overflow: none;
     position: relative;
@@ -205,3 +205,15 @@ height: 60px;
     border: 1px groove #fff;
 }
 
+.nav_button
+{
+    opacity: 1;
+    transition: opacity .25s ease-in-out;
+    -moz-transition: opacity .25s ease-in-out;
+    -webkit-transition: opacity .25s ease-in-out;
+}
+
+.nav_button:active
+{
+    opacity: .5;
+}
