@@ -49,20 +49,21 @@ if($rows != 1) {
 	$leaderboard = array();
 	$leaderboard_array = array();
 
-	$sql = "SELECT id, gamertag, species, pet_level, total_exp, total_gold, image_url, push_date FROM leaderboard";
+	$sql = "SELECT gamertag, species, pet_level, total_gold
+					FROM leaderboard
+					ORDER BY pet_level DESC, species
+					LIMIT 10 ";
 
 	$stmt = $myConn->prepare($sql);
 
 	if ($stmt) {
 	  $stmt->execute();
-	  $stmt->bind_result($id,$gamertag,$species,$pet_level,$total_exp,$total_gold,$image_url,$push_date);
+	  $stmt->bind_result($gamertag,$species,$pet_level,$total_gold);
 	  while ($stmt->fetch()) {
-	    $leaderboard['GAMERTAG']   = $gamertag;
-	    $leaderboard['SPECIES']    = $species;
-	    $leaderboard['PET_LEVEL']  = $pet_level;
-	    $leaderboard['TOTAL_EXP']  = $total_exp;
-	    $leaderboard['TOTAL_GOLD'] = $total_gold;
-	    $leaderboard['PUSH_DATE']  = $push_date;
+	    $leaderboard['Gamertag']   = $gamertag;
+	    $leaderboard['Species']    = $species;
+	    $leaderboard['Level']  = $pet_level;
+	    $leaderboard['Gold'] = $total_gold;
 	    $leaderboard_array[]       = $leaderboard;
 	  }
 	  $stmt->close();

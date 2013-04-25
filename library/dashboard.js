@@ -3,7 +3,6 @@
 // --------------------------------------------------------------------------
 // FUNCTION display pets in statsTable
 function displayPet(i) {
-	// document.getElementById("dangerZone").innerHTML = JSON.stringify(allPets);
 
 		// document.getElementById("nameAtt").innerHTML = allPets[i].nickName;
 		document.getElementById("specAtt").innerHTML = allPets[i].spec;
@@ -52,8 +51,8 @@ function petSelection(j) {
 // --------------------------------------------------------------------------
 
 	// document.getElementById("petImage").innerHTML = allPets[i].neutralURL;
-		// document.getElementById("petImage").innerHTML = 
-		// "<img src='images/neutral/"+allPets[i].spec+".png' alt='Pet Picture' 
+		// document.getElementById("petImage").innerHTML =
+		// "<img src='images/neutral/"+allPets[i].spec+".png' alt='Pet Picture'
 		// 		id='petImg' style='margin: auto;'>";
 
 		 // document.getElementById("petImage").setAttribute("src", allPets[i].neutralURL);

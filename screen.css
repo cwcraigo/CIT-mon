@@ -129,7 +129,7 @@ height: 60px;
     width: 100px;
 }
 
-#tableDiv{
+#statsTableDiv{
     padding: 10px;
     margin: 30px auto 10px auto;
     border: 1px dotted #000;
@@ -166,7 +166,7 @@ height: 60px;
 
 }
 #innerCtrl{
-    width:125px;
+    width:165px;
     margin:0px auto;
 }
 
@@ -184,8 +184,6 @@ height: 60px;
     overflow: none;
     position: relative;
     bottom: 0;
-  /*  width: 100%;
-    display: inline-block;*/
 }
 
 #navigation button{
@@ -216,4 +214,40 @@ height: 60px;
 .nav_button:active
 {
     opacity: .5;
+}
+
+/**************************************************************
+* LEADERBOARD
+***************************************************************/
+#tableDiv{
+    width: 740px;
+    margin: 10px auto;
+    padding: 1%;
+}
+
+#leaderboardTable{
+    border: solid 5px #FFC600;
+    width: 100%;
+    /*margin: 1% auto;*/
+    padding: .25% .5%;
+    background-color: rgb(81, 134,221);
+}
+
+#leaderTitle{
+    font-size: 3rem;
+}
+
+.leaderRow{
+    /*margin: 5px;*/
+}
+
+.leaderHead{
+    background-color: #fff;
+    border: solid 1px rgb(81, 134,221);
+}
+
+.leaderData{
+    border: solid 1px rgb(81, 134,221);
+    background-color: #fff;
+    text-align: center;
 }

@@ -4,7 +4,7 @@ var allPets;
 // THIS FUNCTION RUNS WHEN THE PAGE HAS LOADED
 function init() {
 
-	document.getElementById("dangerZone").style.display='none';
+	document.getElementById("tableDiv").style.display='none';
 	document.getElementById("home").style.display='block';
 
 	// localStorage.setItem('allPets', null);
@@ -15,17 +15,17 @@ function init() {
 
 	if (isEmpty( JSON.parse(localStorage.getItem("allPets")) ) ) {
 
-		initAllPets("Robinsauron",3,8,7,12,0);
-		initAllPets("Armstrango",10,5,10,5,1);
-		initAllPets("Sompooliwag",5,5,10,10,2);
-		initAllPets("McLaughchee",5 ,10,5 ,10,3);
-		initAllPets("Barneezle",5,10,5,10,4);
-		initAllPets("Erix",9,5,10,6,5);
-		initAllPets("Olavedon",8,7,8,7,6);
-		initAllPets("Godfreeboo",7,7,9,7,7);
-		initAllPets("Jacksune",3,9,5,13,8);
-		initAllPets("Rigbeast",8,10,6,6,9);
-		initAllPets("Barzoolet",3,10,8,9,10);
+		initAllPets("Robinsauron",3,8,7,12,0,7,150);
+		initAllPets("Armstrango",10,5,10,5,1,5,100);
+		initAllPets("Sompooliwag",5,5,10,10,2,1,10);
+		initAllPets("McLaughchee",5 ,10,5 ,10,3,32,10000);
+		initAllPets("Barneezle",5,10,5,10,4,50,20000);
+		initAllPets("Erix",9,5,10,6,5,41,6000);
+		initAllPets("Olavedon",8,7,8,7,6,33,700);
+		initAllPets("Godfreeboo",7,7,9,7,7,15,3000);
+		initAllPets("Jacksune",3,9,5,13,8,10,500);
+		initAllPets("Rigbeast",8,10,6,6,9,40,8000);
+		initAllPets("Barzoolet",3,10,8,9,10,30,4000);
 
 	} else {
 
@@ -67,7 +67,7 @@ function Pet(associativeArray){
 
 // --------------------------------------------------------------------------
 // FUNCTION TO
-function initAllPets(species,strength,inteligence,vitality,petmana,index) {
+function initAllPets(species,strength,inteligence,vitality,petmana,index,level,gold) {
 	// var allPets  = new Array();
 	var petStats = new Array();
 
@@ -78,9 +78,9 @@ function initAllPets(species,strength,inteligence,vitality,petmana,index) {
 		"intel"			: inteligence,
 		"vital"			: vitality,
 		"mana"			: petmana,
-		"level"			: 1,
+		"level"			: level,
 		"exp"				: 0,
-		"coin"			: 10,
+		"coin"			: gold,
 		"HP"				: 1,
 		"MP"				: 1,
 		"currFloor" 	: 1,

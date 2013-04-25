@@ -28,7 +28,7 @@ function get_leaderboard() {
 
     // CHANGE VISIBILITY OF HTML DIVS
     document.getElementById("home").style.display='none';
-    document.getElementById("dangerZone").style.display='block';
+    document.getElementById("tableDiv").style.display='block';
 
     // -----------------------------------------------
     // GET TABLE OBJECT
@@ -44,6 +44,7 @@ function get_leaderboard() {
 
       // CREATE AND APPEND TABLE HEADINGS
       var aCell = document.createElement('TH');
+      aCell.setAttribute("class","leaderHead");
       aRow.appendChild(aCell);
       aCell.innerText = pet;
 
@@ -63,6 +64,7 @@ function get_leaderboard() {
       // LOOP THROUGH INDIVIDUAL ARRAY TO DISPLAY STATS
       for(var key in stats){
         var aCell = document.createElement('TD');
+        aCell.setAttribute("class","leaderData");
         aRow.appendChild(aCell);
         aCell.innerHTML = stats[key];
 
@@ -105,8 +107,8 @@ function get_leaderboard() {
     //   if (xmlhttp.readyState==4 && xmlhttp.status==200) {
     //     // in event listner
     //     document.getElementById("home").style.visibility='hidden';
-    //     document.getElementById("dangerZone").style.visibility='visible';
-    //     document.getElementById("dangerZone").innerHTML=xmlhttp.responseText;
+    //     document.getElementById("leaderboard").style.visibility='visible';
+    //     document.getElementById("leaderboard").innerHTML=xmlhttp.responseText;
     //   }
     // }
 
